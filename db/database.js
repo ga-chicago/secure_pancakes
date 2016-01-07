@@ -1,5 +1,8 @@
+// give all the things all the secrets to use!
+require('dotenv').load();
+
 var mongoose = require('mongoose');
-var connectionString = 'mongodb://localhost/pancakes';
+var connectionString = process.env.DATABASE_URL;
 
 mongoose.connect(connectionString);
 
